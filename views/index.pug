@@ -1,0 +1,27 @@
+doctype html
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='/css/style.css')
+    title Shortify!
+.main-form
+    form(method='POST' action='/')
+        label#longUrl(for='longUrl') Long Url
+        br
+        br
+        input#longUrl(type='text' name='longUrl')
+        br
+        br
+        input(type='submit')
+div
+    table.urlsTable
+        tr
+            th Short URL
+            th Long URL
+        each value , key in totalUrls
+            tr
+                td= key
+                td= value
+footer
+    p Made by Ananjan Mitra
