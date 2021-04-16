@@ -55,9 +55,9 @@ app.post("/", function(req, res) {
     
     urls[shortUrl] = req.body.longUrl
     
-    res.render('short', { shortifiedUrl: `Shortified URL - https://127.0.0.1:3000/${shortUrl}` })
+    res.render('short', { shortifiedUrl: `Shortified URL - https://shortify2.herokuapp.com/${shortUrl}` })
 })
 
-app.listen(3000, function(){
-    console.log("Server is running at port 3000");
+app.listen(proccess.env.PORT || 3000, function() {
+    console.log(`Server is running at port ${process.env.PORT || 3000}`);
 })
